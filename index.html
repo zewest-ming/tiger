@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>鸣鸣大老虎</title>
+    <meta
+      name="description"
+      content="鸣鸣大老虎的原创文章网站，收集育儿、家庭、健康照护和中年生活观察。"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="鸣鸣大老虎首页">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/brand/icon.jpg" alt="" />
+        </span>
+        <span class="brand-copy">
+          <strong>鸣鸣大老虎 🐯</strong>
+          <small>家庭、育儿与中年生活观察</small>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="主要导航">
+        <a href="#articles">文章</a>
+        <a href="#topics">栏目</a>
+        <a href="#about">关于</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="tiger-focal">
+        <div class="tiger-avatar">
+          <img src="assets/brand/icon.jpg" alt="鸣鸣大老虎" />
+        </div>
+        <h1 class="focal-title">鸣鸣大老虎 🐯</h1>
+        <p class="focal-desc">一边生活，一边记录。</p>
+      </section>
+
+      <section class="content-area">
+        <section class="reader-shell">
+          <section class="content-column" aria-label="文章列表">
+            <div class="toolbar">
+              <label class="search-box">
+                <span>搜索文章</span>
+                <div class="search-wrapper"><span class="search-icon">🔍</span><input id="searchInput" type="search" placeholder="输入标题或关键词" /></div>
+              </label>
+              <label class="sort-box">
+                <span>排序</span>
+                <select id="sortSelect" aria-label="排序">
+                  <option value="newest">最新发布</option>
+                  <option value="oldest">最早发布</option>
+                  <option value="popular">阅读最多</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="ad-slot ad-slot-wide" aria-label="广告位">
+              <span>Advertisement</span>
+              <strong>顶部横幅广告位</strong>
+            </div>
+
+            <div class="section-title" id="articles">
+              <div>
+                <p class="panel-kicker">Latest</p>
+                <h2>最新文章</h2>
+              </div>
+              <span id="articleCount"></span>
+            </div>
+            <div class="article-grid" id="articleGrid"></div>
+          </section>
+
+          <aside class="right-rail" aria-label="栏目与站点信息">
+            <div class="profile-panel">
+              <p class="panel-kicker">About</p>
+              <h2>鸣鸣大老虎</h2>
+              <p>一边生活，一边记录。文章不是喊口号，是把普通家庭正在经历的事说透一点。</p>
+            </div>
+            <div class="topic-panel">
+              <div class="panel-heading">
+                <p class="panel-kicker">Topics</p>
+                <h2>栏目</h2>
+              </div>
+              <div class="topic-list" id="topicList"></div>
+            </div>
+            <div class="ad-slot ad-slot-tall">
+              <span>Advertisement</span>
+              <strong>侧边栏广告位</strong>
+            </div>
+            <div class="note-panel" id="about">
+            <p class="panel-kicker">About Site</p>
+            <h2>关于本站</h2>
+            <p>用文字记录普通家庭的日子。从育儿到健康，从生活到AI观察，每一篇都是真实经历。</p>
+            <div class="site-info">
+              <span>🐯 原创内容</span>
+              <span>📝 持续更新</span>
+              <span>💬 欢迎留言</span>
+            </div>
+          </div>
+            <div class="ad-slot ad-slot-box">
+              <span>Advertisement</span>
+              <strong>方形广告位</strong>
+            </div>
+          </aside>
+        </section>
+      </section>
+    </main>
+
+    <dialog class="article-dialog" id="articleDialog">
+      <button class="dialog-close" id="closeDialog" aria-label="关闭文章">×</button>
+      <article class="article-view">
+        <p class="article-kicker" id="dialogTopic"></p>
+        <h2 id="dialogTitle"></h2>
+        <div class="article-meta" id="dialogMeta"></div>
+        <img class="article-cover" id="dialogCover" alt="" />
+        <div class="ad-slot ad-slot-inline">
+          <span>Advertisement</span>
+          <strong>文章内广告位</strong>
+        </div>
+        <div class="article-body" id="dialogBody"></div>
+      </article>
+    </dialog>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> 鸣鸣大老虎。所有文章均为原创。</p>
+    </footer>
+
+    <script src="assets/articles.js"></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>
